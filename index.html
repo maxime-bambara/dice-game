@@ -16,7 +16,7 @@
                 <ion-grid class="background">
                         <ion-row>  
                             <ion-col>
-                                <button>
+                                <button id="new-game">
                                     <ion-icon name="add-circle-outline"></ion-icon>
                                     <ion-label>NEW GAME</ion-label>    
                                 </button>     
@@ -27,18 +27,21 @@
                             <ion-col>
                             <div>
                                 <p>PLAYER 1</p>
-                                <p>TOTAL SCORE</p>
+                                <p id="score-player-1">0</p>
                             </div>
                             </ion-col>
-                            <ion-col>
-                                <div>
-                                    <ion-img style="width: 30%; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
-                                </div>
+                                <ion-col>
+                                    <div>
+                                        <ion-img style="width: 30%; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
+                                    </div>
+                                    <div>
+                                        <p>Résultat : <span id="dice-result"></span></p>
+                                    </div>
                                 </ion-col>
                             <ion-col>
                             <div>
                                 <p>PLAYER 2</p>
-                                <p>TOTAL SCORE</p>
+                                <p id="score-player-2">0</p>
                             </div>
                             </ion-col>
                         </ion-row>
@@ -46,19 +49,19 @@
                             <ion-col>
                             <div>
                                 <p>CURENT</p>
-                                <p>Score</p>
+                                <p id="dice-result-1"></p>
                             </div>
                             </ion-col>
                             <ion-col>
                                 <div>
                                     <div>
-                                        <button>
+                                        <button  id="throw-dice">
                                             <ion-icon name="add-circle-outline"></ion-icon>
                                             <ion-label>ROLL DICE</ion-label>    
                                         </button>     
                                     </div>
                                     <div>
-                                        <button>
+                                        <button id="add-to-score">
                                             <ion-icon name="add-circle-outline"></ion-icon>
                                             <ion-label>HOLD</ion-label>    
                                         </button>   
@@ -69,7 +72,7 @@
                             <ion-col>
                             <div>
                                 <p>CURENT</p>
-                                <p>Score</p>
+                                <p id="dice-result-2"></p>
                             </div>
                             </ion-col>
                             
@@ -81,7 +84,7 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>   
-    <script src="js/script.js"></script>
+    <script src="script/script.js"></script>
     </body>
 
 </html>

@@ -10,8 +10,8 @@ function newGame(){
 
     document.getElementById('img-result').src = 'assets/img/1.jpg'
     document.getElementById('dice-result').textContent = 0
-    document.getElementById('count-player-1').textContent = 0
-    document.getElementById('count-player-2').textContent = 0
+    document.getElementById('score-player-1').textContent = 0
+    document.getElementById('score-player-2').textContent = 0
     document.getElementById('player1').style.color = 'green'
     document.getElementById('player2').style.color = 'grey'
 
@@ -27,26 +27,13 @@ function nextPlayer(){
         activePlayer = 0
         diceScore = 0
     }
-    switchColorPlayer()
-}
-// Changer couleur du User lorsqu'il est actif
-function switchColorPlayer() {
-    if (activePlayer === 0){
-        document.getElementById('player1').style.color = 'green'
-        document.getElementById('player2').style.color = 'grey'
-    }
-
-    if (activePlayer === 1){
-        document.getElementById('player2').style.color = 'green'
-        document.getElementById('player1').style.color = 'grey'
-    }    
 }
 
 // Vérifier si le joueur a gagner et changer de joueur si ce n'est pas le cas
 function checkIfWin() {
-    let userNumber = activePlayer + 1
+    let playerNumber = activePlayer + 1
     if(scores[activePlayer] >= 10){
-        alert('Victoire du joueur ' + userNumber)
+        alert('Victoire du joueur ' + playerNumber)
         newGame()
         return true
     } else {
@@ -61,13 +48,14 @@ document.getElementById('new-game').addEventListener('click', newGame)
 // Récupération du boutton 'Lancer de dé'
 document.getElementById('throw-dice').addEventListener('click', function() {
     if(inGame){
+        let playerNumber = activePlayer + 1
         diceScore = Math.trunc(Math.random() * 6 + 1)
         if (diceScore != 1){
             document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
-            document.getElementById('dice-result').textContent = diceScore
+            document.getElementById('dice-result-' + playerNumber).textContent = diceScore
         } else {
             document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
-            document.getElementById('dice-result').textContent = diceScore
+            document.getElementById('dice-result-' + playerNumber).textContent = diceScore
             nextPlayer()
         }
     }
@@ -77,8 +65,8 @@ document.getElementById('throw-dice').addEventListener('click', function() {
 document.getElementById('add-to-score').addEventListener('click', function(){
     if(inGame){
         scores[activePlayer] += diceScore
-        let userNumber = activePlayer + 1
-        document.getElementById('count-player-' + userNumber).textContent = scores[activePlayer]
+        let playerNumber = activePlayer + 1
+        document.getElementById('score-player-' + playerNumber).textContent = scores[activePlayer]
         checkIfWin()
     }
 })
