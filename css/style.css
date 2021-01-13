@@ -11,6 +11,11 @@ ion-content{
 
 }
 
+ion-row{
+    margin-top: 1vw;
+}
+
+
 
 .background{
     background-image: url('../assets/img/background.png');
@@ -21,10 +26,10 @@ ion-content{
 }
 
 .button{
-    font-size: 1.3em;
+    font-size: 1.5vw;
     background-color: transparent;
     color: rgb(102, 102, 102);
-    margin: 5px;
+    margin: 0.5vw;
 }
 
 .button > ion-icon{
@@ -32,13 +37,13 @@ ion-content{
 }
 
 .player-name{
-    font-size: 2em;
+    font-size: 2vw;
 }
 
 .score-player{
     color: rgb(255, 104, 104);
-    font-size: 4em;
-    margin: 0;
+    font-size: 4vw;
+    margin-top: 1vw;
 }
 
 .current-div-score{
@@ -48,11 +53,11 @@ ion-content{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 .current-score{
-    font-size: 3em;
+    font-size: 3vw;
     color: white;
     margin: 0;
 }

@@ -23,7 +23,6 @@
                         
                         <ion-row class="ion-justify-content-around">
                             <ion-col>
-                                <ion-raw>
                                     <div>
                                         <p class="player-name">PLAYER 1</p>
                                         <p id="score-player-1" class="score-player">0</p>
@@ -32,31 +31,11 @@
                                         <p>CURRENT</p>
                                         <p id="dice-result-1" class="current-score">0</p>
                                     </div>
-                                </ion-raw>
-                                
                             </ion-col>
                             <ion-col>
                                     <div>
                                         <ion-img style="width: 40%; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
-                                    </div>
-                            </ion-col>
-                            <ion-col>
-                                <ion-raw>
-                                    <div>
-                                        <p class="player-name">PLAYER 2</p>
-                                        <p id="score-player-2" class="score-player">0</p>
-                                    </div>
-                                    <div class="current-div-score">
-                                        <p>CURRENT</p>
-                                        <p id="dice-result-2" class="current-score">0</p>
-                                    </div>
-                                </ion-raw>
-                                
-                            </ion-col>
-                            
-                        </ion-row>
-                        <ion-row class="ion-justify-content-around"> 
-                            <ion-col>
+                                    </div> 
                                     <div>
                                         <button  id="throw-dice" class="button">
                                             <ion-icon name="refresh-circle-outline"></ion-icon>
@@ -68,7 +47,24 @@
                                             <ion-icon name="download-outline"></ion-icon>
                                             <ion-label>HOLD</ion-label>    
                                         </button>   
-                                    </div>   
+                                    </div> 
+ 
+                            </ion-col>
+                            <ion-col>
+                                <div>
+                                    <p class="player-name">PLAYER 2</p>
+                                    <p id="score-player-2" class="score-player">0</p>
+                                </div>
+                                <div class="current-div-score">
+                                    <p>CURRENT</p>
+                                    <p id="dice-result-2" class="current-score">0</p>
+                                </div>
+                            </ion-col>
+                            
+                        </ion-row>
+                        <ion-row class="ion-justify-content-around"> 
+                            <ion-col>
+  
                                 </ion-col>
                             
                         </ion-row >     
