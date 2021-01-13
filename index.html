@@ -5,11 +5,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jeu de dé</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     </head>
 
     <body>
+        <ion-app>
+            <ion-content class="ion-padding" fullscren='true'>
+                <ion-grid class="background">
+                        <ion-row>  
+                            <ion-col>
+                                <button>
+                                    <ion-icon name="add-circle-outline"></ion-icon>
+                                    <ion-label>New Game</ion-label>    
+                                </button>     
+                            </ion-col>
+                        </ion-row>
+                        
+                        <ion-row class="ion-justify-content-around">
+                            <ion-col>
+                            <div>
+                                <p>Player 1</p>
+                                <p>Total Score</p>
+                            </div>
+                            </ion-col>
+                            <ion-col>
+                                <div>
+                                    <p>Img Dé</p>
+                                </div>
+                                </ion-col>
+                            <ion-col>
+                            <div>
+                                <p>Player 2</p>
+                                <p>Total Score</p>
+                            </div>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-justify-content-around"> 
+                            <ion-col>
+                            <div>
+                                <p>Curent</p>
+                                <p>Score</p>
+                            </div>
+                            </ion-col>
+                            <ion-col>
+                                <div>
+                                    <p>ROLL DICE</p>
+                                    <p>HOLD</p>
+                                </div>
+                                </ion-col>
+                            <ion-col>
+                            <div>
+                                <p>Curent</p>
+                                <p>Score</p>
+                            </div>
+                            </ion-col>
+                            
+                        </ion-row >     
+                  </ion-grid>
+            </ion-content>
+          </ion-app>
 
 
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>   
     <script src="js/script.js"></script>
     </body>
 
