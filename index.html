@@ -1,11 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jeu de dé</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -16,7 +18,7 @@
                             <ion-col>
                                 <button>
                                     <ion-icon name="add-circle-outline"></ion-icon>
-                                    <ion-label>New Game</ion-label>    
+                                    <ion-label>NEW GAME</ion-label>    
                                 </button>     
                             </ion-col>
                         </ion-row>
@@ -24,38 +26,49 @@
                         <ion-row class="ion-justify-content-around">
                             <ion-col>
                             <div>
-                                <p>Player 1</p>
-                                <p>Total Score</p>
+                                <p>PLAYER 1</p>
+                                <p>TOTAL SCORE</p>
                             </div>
                             </ion-col>
                             <ion-col>
                                 <div>
-                                    <p>Img Dé</p>
+                                    <ion-img style="width: 30%; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
                                 </div>
                                 </ion-col>
                             <ion-col>
                             <div>
-                                <p>Player 2</p>
-                                <p>Total Score</p>
+                                <p>PLAYER 2</p>
+                                <p>TOTAL SCORE</p>
                             </div>
                             </ion-col>
                         </ion-row>
                         <ion-row class="ion-justify-content-around"> 
                             <ion-col>
                             <div>
-                                <p>Curent</p>
+                                <p>CURENT</p>
                                 <p>Score</p>
                             </div>
                             </ion-col>
                             <ion-col>
                                 <div>
-                                    <p>ROLL DICE</p>
-                                    <p>HOLD</p>
+                                    <div>
+                                        <button>
+                                            <ion-icon name="add-circle-outline"></ion-icon>
+                                            <ion-label>ROLL DICE</ion-label>    
+                                        </button>     
+                                    </div>
+                                    <div>
+                                        <button>
+                                            <ion-icon name="add-circle-outline"></ion-icon>
+                                            <ion-label>HOLD</ion-label>    
+                                        </button>   
+                                    </div>   
+                                    
                                 </div>
                                 </ion-col>
                             <ion-col>
                             <div>
-                                <p>Curent</p>
+                                <p>CURENT</p>
                                 <p>Score</p>
                             </div>
                             </ion-col>
