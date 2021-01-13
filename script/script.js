@@ -8,13 +8,11 @@ function newGame(){
     diceScore = 0
     inGame = true
 
-    document.getElementById('img-result').src = 'assets/img/1.jpg'
-    document.getElementById('dice-result').textContent = 0
+    document.getElementById('img-result').src = 'assets/img/0.jpg'
     document.getElementById('score-player-1').textContent = 0
     document.getElementById('score-player-2').textContent = 0
-    document.getElementById('player1').style.color = 'green'
-    document.getElementById('player2').style.color = 'grey'
-
+    document.getElementById('dice-result-1').textContent = 0
+    document.getElementById('dice-result-2').textContent = 0
 }
 
 // Fonction pour changer de joueur
@@ -63,7 +61,7 @@ document.getElementById('throw-dice').addEventListener('click', function() {
 
 // Récupération du boutton 'Ajouter au score'
 document.getElementById('add-to-score').addEventListener('click', function(){
-    if(inGame){
+    if(inGame && diceScore != 0){
         scores[activePlayer] += diceScore
         let playerNumber = activePlayer + 1
         document.getElementById('score-player-' + playerNumber).textContent = scores[activePlayer]

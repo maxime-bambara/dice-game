@@ -4,11 +4,53 @@
 
 ion-content{
     --background: #fff url('../assets/img/background-app.png') no-repeat center center / cover;
-    font-family:Varela !important;
+    font-family:Lato !important;
+}
+
+ion-col{
+ margin: 10px;
 }
 
 .background{
     background-image: url('../assets/img/background.png');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+}
+
+.button{
+    font-size: 1.3rem;
+    background-color: transparent;
+    color: rgb(102, 102, 102);
+    margin: 5px;
+}
+
+.button > ion-icon{
+    color: rgb(255, 104, 104);
+}
+
+.player-name{
+    font-size: 2rem;
+}
+
+.score-player{
+    color: rgb(255, 104, 104);
+    font-size: 4rem;
+    margin: 0;
+}
+
+.current-div-score{
+    background-color: rgb(255, 104, 104);
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+}
+
+.current-score{
+    font-size: 3rem;
+    color: white;
+    margin: 0;
 }
