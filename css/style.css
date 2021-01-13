@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+
 :root {
     text-align: center;
+    
 }
 
 ion-content{
     --background: #fff url('../assets/img/background-app.png') no-repeat center center / cover;
-    font-family:Lato !important;
+    font-family: 'Lato', sans-serif;
+
 }
 
-ion-col{
- margin: 10px;
-}
 
 .background{
     background-image: url('../assets/img/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100%;
 }
 
 .button{
-    font-size: 1.3rem;
+    font-size: 1.3em;
     background-color: transparent;
     color: rgb(102, 102, 102);
     margin: 5px;
@@ -30,12 +32,12 @@ ion-col{
 }
 
 .player-name{
-    font-size: 2rem;
+    font-size: 2em;
 }
 
 .score-player{
     color: rgb(255, 104, 104);
-    font-size: 4rem;
+    font-size: 4em;
     margin: 0;
 }
 
@@ -46,11 +48,11 @@ ion-col{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .current-score{
-    font-size: 3rem;
+    font-size: 3em;
     color: white;
     margin: 0;
 }

@@ -6,17 +6,12 @@
         <title>Jeu de dé</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <ion-app>
             <ion-content class="ion-padding">
                 <ion-grid class="background">
-                    <ion-row class="ion-justify-content-around">
-                        
-                    </ion-row>
                         <ion-row>  
                             <ion-col>
                                 <button id="new-game" class="button">
@@ -28,32 +23,40 @@
                         
                         <ion-row class="ion-justify-content-around">
                             <ion-col>
-                                <div>
-                                    <p class="player-name">PLAYER 1</p>
-                                    <p id="score-player-1" class="score-player">0</p>
-                                </div>
+                                <ion-raw>
+                                    <div>
+                                        <p class="player-name">PLAYER 1</p>
+                                        <p id="score-player-1" class="score-player">0</p>
+                                    </div>
+                                    <div class="current-div-score">
+                                        <p>CURRENT</p>
+                                        <p id="dice-result-1" class="current-score">0</p>
+                                    </div>
+                                </ion-raw>
+                                
                             </ion-col>
-                                <ion-col>
+                            <ion-col>
                                     <div>
                                         <ion-img style="width: 40%; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
                                     </div>
-                                </ion-col>
-                            <ion-col>
-                                <div>
-                                    <p class="player-name" style="color: rgb(124, 124, 124);">PLAYER 2</p>
-                                    <p id="score-player-2" class="score-player">0</p>
-                                </div>
                             </ion-col>
+                            <ion-col>
+                                <ion-raw>
+                                    <div>
+                                        <p class="player-name">PLAYER 2</p>
+                                        <p id="score-player-2" class="score-player">0</p>
+                                    </div>
+                                    <div class="current-div-score">
+                                        <p>CURRENT</p>
+                                        <p id="dice-result-2" class="current-score">0</p>
+                                    </div>
+                                </ion-raw>
+                                
+                            </ion-col>
+                            
                         </ion-row>
                         <ion-row class="ion-justify-content-around"> 
                             <ion-col>
-                                <div class="current-div-score">
-                                    <p>CURRENT</p>
-                                    <p id="dice-result-1" class="current-score">0</p>
-                                </div>
-                            </ion-col>
-                            <ion-col>
-                                <div>
                                     <div>
                                         <button  id="throw-dice" class="button">
                                             <ion-icon name="refresh-circle-outline"></ion-icon>
@@ -66,15 +69,7 @@
                                             <ion-label>HOLD</ion-label>    
                                         </button>   
                                     </div>   
-                                    
-                                </div>
                                 </ion-col>
-                            <ion-col>
-                                <div class="current-div-score">
-                                    <p>CURRENT</p>
-                                    <p id="dice-result-2" class="current-score">0</p>
-                                </div>
-                            </ion-col>
                             
                         </ion-row >     
                   </ion-grid>
