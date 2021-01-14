@@ -37,7 +37,7 @@ ion-row{
 }
 
 .player-name{
-    font-size: 2vw;
+    font-size: 3.5vw;
 }
 
 .score-player{
@@ -63,5 +63,5 @@ ion-row{
 }
 
 #bottom-button{
-    margin-top: 5vw;
+    margin-top: 6vw;
 }

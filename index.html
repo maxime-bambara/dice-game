@@ -24,7 +24,7 @@
                         <ion-row class="ion-justify-content-around">
                             <ion-col>
                                     <div>
-                                        <p class="player-name">PLAYER 1</p>
+                                        <p class="player-name">PLAYER 1<span id="select-player-1" style="opacity: 0; margin-left: 2vw;">🔴</span></p>
                                         <p id="score-player-1" class="score-player">0</p>
                                     </div>
                                     <div class="current-div-score">
@@ -53,7 +53,7 @@
                             </ion-col>
                             <ion-col>
                                 <div>
-                                    <p class="player-name">PLAYER 2</p>
+                                    <p class="player-name">PLAYER 2<span id="select-player-2" style="opacity: 0; margin-left: 2vw;">🔴</span></p>
                                     <p id="score-player-2" class="score-player">0</p>
                                 </div>
                                 <div class="current-div-score">
@@ -76,10 +76,12 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>   
-    <script src="script/script.js"></script>
     <script src="script/functions/checkIfWin.js"></script>
     <script src="script/functions/nextPlayer.js"></script>
     <script src="script/functions/resetScores.js"></script>
+    <script src="script/functions/newGame.js"></script>
+    <script src="script/script.js"></script>
+
     </body>
 
 </html>
