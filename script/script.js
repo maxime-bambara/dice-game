@@ -1,12 +1,14 @@
 // Initialisation des variables
-let scores, activePlayer, diceScore, inGame
+let scores, activePlayer, diceScore, inGame, currentScores, playerNumber
 
 // Remettre à zéro les variables pour une nouvelle partie
 function newGame(){
     scores = [0,0]
+    currentScores = [0,0]
     activePlayer = 0
     diceScore = 0
     inGame = true
+    playerNumber = [1,2]
 
     document.getElementById('img-result').src = 'assets/img/0.jpg'
     document.getElementById('score-player-1').textContent = 0
@@ -15,45 +17,21 @@ function newGame(){
     document.getElementById('dice-result-2').textContent = 0
 }
 
-// Fonction pour changer de joueur
-function nextPlayer(){
-    if (activePlayer === 0){
-        activePlayer = 1
-        diceScore = 0
-
-    } else{
-        activePlayer = 0
-        diceScore = 0
-    }
-}
-
-// Vérifier si le joueur a gagner et changer de joueur si ce n'est pas le cas
-function checkIfWin() {
-    let playerNumber = activePlayer + 1
-    if(scores[activePlayer] >= 10){
-        alert('Victoire du joueur ' + playerNumber)
-        newGame()
-        return true
-    } else {
-        nextPlayer()
-    }
-}
-
-
 // Récupération du boutton 'Nouvelle partie'
 document.getElementById('new-game').addEventListener('click', newGame)
 
 // Récupération du boutton 'Lancer de dé'
 document.getElementById('throw-dice').addEventListener('click', function() {
     if(inGame){
-        let playerNumber = activePlayer + 1
         diceScore = Math.trunc(Math.random() * 6 + 1)
+        currentScores[activePlayer] = parseInt(document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent, 10)
         if (diceScore != 1){
             document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
-            document.getElementById('dice-result-' + playerNumber).textContent = diceScore
+            currentScores[activePlayer] += diceScore
+            document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
         } else {
             document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
-            document.getElementById('dice-result-' + playerNumber).textContent = diceScore
+            document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
             nextPlayer()
         }
     }
@@ -61,10 +39,9 @@ document.getElementById('throw-dice').addEventListener('click', function() {
 
 // Récupération du boutton 'Ajouter au score'
 document.getElementById('add-to-score').addEventListener('click', function(){
-    if(inGame && diceScore != 0){
-        scores[activePlayer] += diceScore
-        let playerNumber = activePlayer + 1
-        document.getElementById('score-player-' + playerNumber).textContent = scores[activePlayer]
+    if(inGame && currentScores[activePlayer] != 0){
+        scores[activePlayer] += currentScores[activePlayer]
+        document.getElementById('score-player-' + playerNumber[activePlayer]).textContent = scores[activePlayer]
         checkIfWin()
     }
 })

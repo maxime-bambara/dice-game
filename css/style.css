@@ -29,7 +29,7 @@ ion-row{
     font-size: 1.5vw;
     background-color: transparent;
     color: rgb(102, 102, 102);
-    margin: 0.5vw;
+    margin-bottom: 4vw;
 }
 
 .button > ion-icon{
@@ -60,4 +60,8 @@ ion-row{
     font-size: 3vw;
     color: white;
     margin: 0;
+}
+
+#bottom-button{
+    margin-top: 5vw;
 }
