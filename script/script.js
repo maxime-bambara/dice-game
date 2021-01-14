@@ -10,11 +10,11 @@ document.getElementById('throw-dice').addEventListener('click', function() {
         diceScore = Math.trunc(Math.random() * 6 + 1)
         currentScores[activePlayer] = parseInt(document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent, 10)
         if (diceScore != 1){
-            document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
+            document.getElementById('img-result').src = 'assets/img/' + diceScore + '.png'
             currentScores[activePlayer] += diceScore
             document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
         } else {
-            document.getElementById('img-result').src = 'assets/img/' + diceScore + '.jpg'
+            document.getElementById('img-result').src = 'assets/img/' + diceScore + '.png'
             document.getElementById('dice-result-' + playerNumber[activePlayer]).textContent = currentScores[activePlayer]
             nextPlayer()
         }

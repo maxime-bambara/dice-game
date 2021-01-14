@@ -24,7 +24,7 @@
                         <ion-row class="ion-justify-content-around">
                             <ion-col>
                                     <div>
-                                        <p class="player-name">PLAYER 1<span id="select-player-1" style="opacity: 0; margin-left: 2vw;">🔴</span></p>
+                                        <p class="player-name" style="color: gray;">PLAYER 1<span id="select-player-1" class="select-player">🔴</span></p>
                                         <p id="score-player-1" class="score-player">0</p>
                                     </div>
                                     <div class="current-div-score">
@@ -34,7 +34,7 @@
                             </ion-col>
                             <ion-col>
                                     <div>
-                                        <ion-img style="width: 10vw; margin: auto;" src="/assets/img/0.jpg" id="img-result"></ion-img>
+                                        <ion-img style="width: 10vw; margin: auto;" src="/assets/img/1.png" id="img-result"></ion-img>
                                     </div>
                                     <div id="bottom-button">
                                         <div>
@@ -53,7 +53,7 @@
                             </ion-col>
                             <ion-col>
                                 <div>
-                                    <p class="player-name">PLAYER 2<span id="select-player-2" style="opacity: 0; margin-left: 2vw;">🔴</span></p>
+                                    <p class="player-name">PLAYER 2<span id="select-player-2" class="select-player">🔴</span></p>
                                     <p id="score-player-2" class="score-player">0</p>
                                 </div>
                                 <div class="current-div-score">
@@ -61,14 +61,7 @@
                                     <p id="dice-result-2" class="current-score">0</p>
                                 </div>
                             </ion-col>
-                            
-                        </ion-row>
-                        <ion-row class="ion-justify-content-around"> 
-                            <ion-col>
-  
-                                </ion-col>
-                            
-                        </ion-row >     
+                        </ion-row> 
                   </ion-grid>
             </ion-content>
           </ion-app>
@@ -76,11 +69,11 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>   
-    <script src="script/functions/checkIfWin.js"></script>
-    <script src="script/functions/nextPlayer.js"></script>
-    <script src="script/functions/resetScores.js"></script>
-    <script src="script/functions/newGame.js"></script>
-    <script src="script/script.js"></script>
+    <script src="/script/functions/checkIfWin.js"></script>
+    <script src="/script/functions/nextPlayer.js"></script>
+    <script src="/script/functions/resetScores.js"></script>
+    <script src="/script/functions/newGame.js"></script>
+    <script src="/script/script.js"></script>
 
     </body>
 

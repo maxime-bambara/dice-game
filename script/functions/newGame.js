@@ -7,10 +7,11 @@ function newGame() {
     inGame = true;
     playerNumber = [1, 2];
 
-    document.getElementById('img-result').src = 'assets/img/0.jpg';
+    document.getElementById('img-result').src = 'assets/img/1.png';
     document.getElementById('score-player-1').textContent = 0;
     document.getElementById('score-player-2').textContent = 0;
     document.getElementById('dice-result-1').textContent = 0;
     document.getElementById('dice-result-2').textContent = 0;
-    document.getElementById('select-player-1').style.opacity = '0.8';
+    document.getElementById('select-player-1').style.display = 'inline-block';
+    document.getElementById('select-player-2').style.display = 'none';
 }

@@ -4,4 +4,5 @@ function resetScores() {
     currentScores = [0, 0];
     document.getElementById('dice-result-1').textContent = 0
     document.getElementById('dice-result-2').textContent = 0
+    
 }
