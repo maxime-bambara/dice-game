@@ -73,4 +73,5 @@ ion-row{
 .select-player{
     display: none;
     margin-left: 2vw;
+    font-size: 2vw;
 }
